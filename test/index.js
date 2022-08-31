@@ -26,8 +26,8 @@ function testPair (dec, enc) {
 }
 const syscoinNetworks = {
   mainnet: {
-    messagePrefix: '\x18Syscoin Signed Message:\n',
-    bech32: 'bc',
+    messagePrefix: '\x18Vircles Signed Message:\n',
+    bech32: process.env.BECH32 || 'vcl',
     bip32: {
       public: 0x0488b21e,
       private: 0x0488ade4
@@ -37,8 +37,8 @@ const syscoinNetworks = {
     wif: 0x80
   },
   testnet: {
-    messagePrefix: '\x18Syscoin Signed Message:\n',
-    bech32: 'tsys',
+    messagePrefix: '\x18Vircles Signed Message:\n',
+    bech32: process.env.BECH32 || 'tvcl',
     bip32: {
       public: 0x043587cf,
       private: 0x04358394

@@ -25,8 +25,8 @@ const ASSET_INIT = 128 // upon asset creation
 const bitcoinNetworks = { mainnet: bitcoin.networks.bitcoin, testnet: bitcoin.networks.testnet }
 const syscoinNetworks = {
   mainnet: {
-    messagePrefix: '\x18Syscoin Signed Message:\n',
-    bech32: 'sys',
+    messagePrefix: '\x18Vircles Signed Message:\n',
+    bech32: process.env.BECH32 || 'vcl',
     bip32: {
       public: 0x0488b21e,
       private: 0x0488ade4
@@ -36,8 +36,8 @@ const syscoinNetworks = {
     wif: 0x80
   },
   testnet: {
-    messagePrefix: '\x18Syscoin Signed Message:\n',
-    bech32: 'tsys',
+    messagePrefix: '\x18Vircles Signed Message:\n',
+    bech32: process.env.BECH32 || 'tvcl',
     bip32: {
       public: 0x043587cf,
       private: 0x04358394
